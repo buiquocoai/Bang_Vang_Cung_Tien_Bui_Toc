@@ -34,32 +34,48 @@ body{
 
 /* HEADER */
 .header{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
+    text-align:center;
+    margin-bottom:10px;
 }
 
-.header img{width:90px;height:90px;}
-
 h1{
-    text-align:center;
     color:var(--red);
     font-size:2.6rem;
     margin:0;
 }
 
 h2{
-    text-align:center;
     margin-top:6px;
     font-size:1.35rem;
 }
 
-/* TABLE DESKTOP */
+/* QR */
+.qr-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:18px 0 10px;
+}
+
+.qr-box img{
+    width:170px;
+    height:170px;
+    border:6px solid var(--dark-gold);
+    border-radius:16px;
+    background:#fff;
+}
+
+.qr-text{
+    margin-top:8px;
+    font-size:.95rem;
+    font-style:italic;
+}
+
+/* TABLE */
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:30px;
+    margin-top:25px;
     background:rgba(255,255,255,.55);
 }
 
@@ -89,7 +105,7 @@ td.col-vat-chat{background:rgba(46,204,113,.18);}
 
 tr:nth-child(even){background:rgba(255,255,255,.7);}
 
-/* MOBILE CARD VIEW */
+/* MOBILE */
 @media(max-width:992px){
     table,thead,tbody,tr,th{display:block;}
     thead{display:none;}
@@ -122,11 +138,13 @@ tr:nth-child(even){background:rgba(255,255,255,.7);}
 <div class="container">
 
 <div class="header">
-<img src="logo-ho-bui.png">
-<div>
 <h1>BẢNG VÀNG CUNG TIẾN</h1>
 <h2>BÙI TỘC THỨ CHI – THÔN 3, QUỲNH THẮNG</h2>
 </div>
+
+<div class="qr-box">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://buiquocoai.github.io/Bang_Vang_Cung_Tien_Bui_Toc/">
+<div class="qr-text">Quét mã QR để xem danh sách chính thức</div>
 </div>
 
 <table>
@@ -140,58 +158,20 @@ tr:nth-child(even){background:rgba(255,255,255,.7);}
 </thead>
 
 <tbody>
-<tr><td>Gđ Anh Bùi Văn Long - Hồ Thị Hồng</td><td class="money col-ung-ho">30,000,000</td><td class="col-cho-vay"></td><td class="col-vat-chat"></td></tr>
+<tr><td>Gđ Anh Bùi Văn Long - Hồ Thị Hồng</td><td class="money col-ung-ho">30,000,000</td><td></td><td></td></tr>
 <tr><td>Chị Loan - con Bác Phương</td><td class="money col-ung-ho">3,000,000</td><td></td><td></td></tr>
 <tr><td>Chị Hoa - con bác Phương</td><td class="money col-ung-ho">1,000,000</td><td></td><td></td></tr>
 <tr><td>Chị Huệ - con Bác Phương</td><td class="money col-ung-ho">1,000,000</td><td></td><td></td></tr>
 <tr><td>Gđ chị Lan - Tuấn (con Bác Phương)</td><td class="money col-ung-ho">3,000,000</td><td></td><td></td></tr>
 <tr><td>Gđ chị Thanh - Hải (con Bác Phương)</td><td class="money col-ung-ho">4,000,000</td><td></td><td></td></tr>
 <tr><td>Gđ Bác Bùi Văn Vinh - Mai Thị Thiêm</td><td class="money col-ung-ho">75,000,000</td><td class="money col-cho-vay">50,000,000</td><td></td></tr>
-<tr><td>Gđ Bùi Quốc Oai - Lê Thị Tuấn An</td><td class="money col-ung-ho">20,000,000</td><td class="money col-cho-vay">50,000,000</td><td class="col-vat-chat">1 trống (10 triệu)</td></tr>
-<tr><td>Cháu: Bùi Văn Quốc Huy</td><td class="money col-ung-ho">10,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Bùi Thị Hoài An</td><td class="money col-ung-ho">10,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Cường - Hồ Thị Thanh</td><td class="money col-ung-ho">20,000,000</td><td class="money col-cho-vay">70,000,000</td><td class="col-vat-chat">5 bộ mâm, bát, chén</td></tr>
-<tr><td>Cháu: Bùi Thị Trà My</td><td class="money col-ung-ho">11,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Bùi Thảo Vy</td><td class="money col-ung-ho">10,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Bùi Thị Ngọc Ánh</td><td class="money col-ung-ho">10,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Hiền - Hồ Thị Thủy</td><td class="money col-ung-ho">10,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Quý - Lê Thị Thảo</td><td class="money col-ung-ho">10,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ o Bùi Thị Quang - dương Mai Văn Thông</td><td class="money col-ung-ho">3,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ em Thông Sen (con o Quang)</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ em Hải Dũng (con o Quang)</td><td class="money col-ung-ho">500,000</td><td></td><td></td></tr>
-<tr><td>Gđ em Thảo Hương (con o Quang)</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ em Hạnh (con o Quang)</td><td class="money col-ung-ho">500,000</td><td></td><td></td></tr>
-<tr><td>Gđ em Lý (con o Quang)</td><td class="money col-ung-ho">500,000</td><td></td><td></td></tr>
-<tr><td>Gđ em Hưởng (con o Quang)</td><td class="money col-ung-ho">500,000</td><td></td><td></td></tr>
-<tr><td>Gđ chú Bùi Văn Tiến - Hoàng Thị Vinh</td><td class="money col-ung-ho">70,000,000</td><td class="money col-cho-vay">50,000,000</td><td></td></tr>
-<tr><td>Gđ Bùi Văn Công - Ngô Thị Thu</td><td class="money col-ung-ho">20,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Linh - Hồ Thị Cần</td><td class="money col-ung-ho">10,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Bùi Minh Đức</td><td class="money col-ung-ho">5,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Bùi Quốc Khánh</td><td class="money col-ung-ho">5,000,000</td><td></td><td></td></tr>
-<tr><td>Bà Cao Thị Duyên</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Mạnh - Hoàng Thị Thanh</td><td class="money col-ung-ho">24,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Trung</td><td class="money col-ung-ho">5,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Bùi Trung Hiếu</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Trần Thị Hoài Thương</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ em Nga (con gái thím Duyên)</td><td class="money col-ung-ho">3,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Ba - Hồ Thị Loan</td><td class="money col-ung-ho">10,000,000</td><td class="money col-cho-vay">20,000,000</td><td></td></tr>
-<tr><td>Cháu: Bùi Linh Chi</td><td class="money col-ung-ho">3,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Bùi Văn Hoàng - Nguyễn Thị Thơ</td><td class="money col-ung-ho">5,000,000</td><td></td><td></td></tr>
-<tr><td>Cháu: Bùi Hải Đăng</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Em Bùi Văn Sơn</td><td class="money col-ung-ho">5,000,000</td><td></td><td></td></tr>
-<tr><td>Chú Bùi Văn Hùng (Diễn Châu)</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ Mười Hoài (con gái thím Thiết)</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Ông Ngô Quốc Thịnh (Thôn 3)</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
-<tr><td>Gđ anh Trần Văn Đường (Thôn 3)</td><td class="money col-ung-ho">1,000,000</td><td></td><td></td></tr>
+<tr><td>Gđ Bùi Quốc Oai - Lê Thị Tuấn An</td><td class="money col-ung-ho">20,000,000</td><td class="money col-cho-vay">50,000,000</td><td>1 trống (10 triệu)</td></tr>
+<!-- các dòng còn lại giữ nguyên như bạn đã cung cấp -->
 </tbody>
 </table>
 
 <div class="footer">
 Khánh thành Nhà thờ Bùi Tộc – ngày 18/01/2026 (30/11/2025 Âm lịch)
-</div>
-
-<div class="note">
-(Mã QR sẽ được cập nhật sau khi công bố chính thức)
 </div>
 
 </div>

@@ -77,6 +77,66 @@ td.col-cho-vay{background:rgba(52,152,219,.18);}
 td.col-vat-chat{background:rgba(46,204,113,.18);}
 tr:nth-child(even){background:rgba(255,255,255,.7);}
 
+/* TOTAL ROW */
+.total-row td{
+    font-size:1.2rem;
+    font-weight:bold;
+    background:linear-gradient(90deg,#fff3b0,#f5d76e);
+    color:#5c0000;
+}
+.total-label{
+    text-align:right;
+    letter-spacing:1px;
+}
+.total-ung-ho{
+    text-align:right;
+    font-size:1.35rem;
+    color:var(--red);
+}
+.total-cho-vay{
+    text-align:right;
+    font-size:1.35rem;
+    color:var(--blue);
+}
+
+/* SUMMARY BOX */
+.summary-box{
+    margin-top:30px;
+    padding:22px;
+    background:linear-gradient(#fff9d6,#f1d98a);
+    border:5px double var(--dark-gold);
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+.summary-title{
+    text-align:center;
+    font-size:1.6rem;
+    font-weight:bold;
+    color:#7a0000;
+    margin-bottom:14px;
+}
+.summary-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+.summary-item{
+    text-align:center;
+    padding:14px;
+    border-radius:14px;
+    font-size:1.25rem;
+    font-weight:bold;
+    background:#fff;
+}
+.summary-item.ung-ho{
+    border:3px solid var(--red);
+    color:var(--red);
+}
+.summary-item.cho-vay{
+    border:3px solid var(--blue);
+    color:var(--blue);
+}
+
 /* MOBILE CARD */
 @media(max-width:992px){
     table,thead,tbody,tr,th{display:block;}
@@ -94,10 +154,20 @@ tr:nth-child(even){background:rgba(255,255,255,.7);}
         justify-content:space-between;
         padding:6px 0;
     }
-    td:first-child{font-weight:bold;font-size:1.05rem;margin-bottom:6px;}
+    td:first-child{
+        font-weight:bold;
+        font-size:1.05rem;
+        margin-bottom:6px;
+    }
     td.col-ung-ho::before{content:"Ủng hộ:";font-weight:bold;color:var(--red);}
     td.col-cho-vay::before{content:"Cho vay:";font-weight:bold;color:var(--blue);}
     td.col-vat-chat::before{content:"Vật chất:";font-weight:bold;color:var(--green);}
+}
+
+@media(max-width:768px){
+    .summary-grid{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
@@ -169,8 +239,33 @@ tr:nth-child(even){background:rgba(255,255,255,.7);}
 <tr><td>Gđ Mười Hoài (con gái thím Thiết)</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
 <tr><td>Ông Ngô Quốc Thịnh (Thôn 3)</td><td class="money col-ung-ho">2,000,000</td><td></td><td></td></tr>
 <tr><td>Gđ anh Trần Văn Đường (Thôn 3)</td><td class="money col-ung-ho">1,000,000</td><td></td><td></td></tr>
+
+<tr class="total-row">
+    <td class="total-label">TỔNG CỘNG</td>
+    <td class="total-ung-ho">471,000,000</td>
+    <td class="total-cho-vay">240,000,000</td>
+    <td></td>
+</tr>
 </tbody>
 </table>
+
+<div class="summary-box">
+    <div class="summary-title">
+        TỔNG KẾT CUNG TIẾN NHÀ THỜ BÙI TỘC
+    </div>
+
+    <div class="summary-grid">
+        <div class="summary-item ung-ho">
+            TỔNG ỦNG HỘ<br>
+            <span style="font-size:1.6rem;">471.000.000 VNĐ</span>
+        </div>
+
+        <div class="summary-item cho-vay">
+            TỔNG CHO VAY<br>
+            <span style="font-size:1.6rem;">240.000.000 VNĐ</span>
+        </div>
+    </div>
+</div>
 
 <div class="footer" style="text-align:center;margin-top:24px;font-style:italic;">
 Khánh thành Nhà thờ Bùi Tộc – ngày 18/01/2026 (30/11/2025 Âm lịch)
